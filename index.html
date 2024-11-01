@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domicile Record Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .green-block {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 24px;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e7f5e7;
+            display: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       
+      <!-- <h1>Domicile Record Verification</h1> -->
+      <header>
+        <img src="logo.png" alt="Logo" style="width: 50px; height: auto; vertical-align: middle;">
+        <h1 style="display:inline; margin-left: 10px;">Domicile Record Verification</h1>
+    </header>
+    
+    </header>
+    
+    <div class="container">
+        <div class="green-block">Verify Your Domicile Record Easily</div>
+        <p>Welcome to the Domicile Record Verification service. This platform allows you to easily verify domicile records in District South, Karachi. Simply enter the required information below to check the records.</p>
+        
+        <input type="text" id="inputField" placeholder="Enter your CNIC or Phone Number">
+        <button onclick="checkRecord()">Verify</button>
+        
+        <div class="results" id="result"></div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Domicile Record Verification Service. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function checkRecord() {
+            var input = document.getElementById('inputField').value;
+            var resultDiv = document.getElementById('result');
+            var record = "";
+
+            if (input === "4250173105107") {
+                record = "Nadeem khan, Karachi, Cast: Baloch";
+            } else if (input === "03032094277") {
+                record = "Nadeem khan S/o Bagan";
+            } else if (input === "03007053944") {
+                record = "Shah Nawaz S/o Ali Nawaz";
+            } else {
+                record = "No record found for the entered information.";
+            }
+            resultDiv.style.display = "block";
+            resultDiv.innerHTML = record;
+        }
+    </script>
+</body>
+</html>
